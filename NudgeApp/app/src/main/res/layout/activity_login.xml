@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#7ED957"
+    android:id="@+id/loginForm">
+
+    <TextView
+        android:id="@+id/Enter"
+        android:layout_width="230dp"
+        android:layout_height="29dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Enter your licence code"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="gravity"
+        android:textSize="22dp"
+        />
+    <EditText
+        android:id="@+id/licencecode"
+        android:layout_width="260dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/edit_round"
+        android:layout_below="@+id/Enter"
+        android:layout_centerInParent="true"
+        />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_below="@+id/licencecode"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Click here to get licence"
+        android:textColor="#FFFF"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Log In" />
+
+
+
+</RelativeLayout>
