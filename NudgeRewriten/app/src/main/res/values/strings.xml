@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NudgeRewriten</string>
+    <string name="login_preference">com.example.nudgerewriten.login_preference</string>
+    <string name="login_status">com.example.nudgerewriten.login_status</string>
 </resources>

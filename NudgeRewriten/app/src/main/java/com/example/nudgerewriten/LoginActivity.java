@@ -15,6 +15,7 @@ public class LoginActivity extends AppCompatActivity {
     public static final String SHARED_PREFS = "sharedPrefs";
     public static final String TEXT = "text";
     private EditText licencecode;
+    public Shared shared;
     private final TextWatcher mTextEditorWatcher = new TextWatcher() {
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }
@@ -29,16 +30,25 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
+                shared.writeLoginStatus(true);
 
             }
         }
     };
+
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        licencecode = (EditText) findViewById(R.id.licenceCode);
-        licencecode.addTextChangedListener(mTextEditorWatcher);
+        shared = new Shared(getApplicationContext());
+        if (shared.readLoginStatus()) {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+
+        } else {
+            licencecode = (EditText) findViewById(R.id.licenceCode);
+            licencecode.addTextChangedListener(mTextEditorWatcher);
         }
+    }
 }
