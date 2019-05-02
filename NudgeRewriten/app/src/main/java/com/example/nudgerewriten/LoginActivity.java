@@ -12,8 +12,7 @@ import android.widget.EditText;
 
 public class LoginActivity extends AppCompatActivity {
 
-    public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String TEXT = "text";
+
     private EditText licencecode;
     public Shared shared;
     private final TextWatcher mTextEditorWatcher = new TextWatcher() {
@@ -46,7 +45,9 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
 
-        } else {
+        }
+        else
+        {
             licencecode = (EditText) findViewById(R.id.licenceCode);
             licencecode.addTextChangedListener(mTextEditorWatcher);
         }

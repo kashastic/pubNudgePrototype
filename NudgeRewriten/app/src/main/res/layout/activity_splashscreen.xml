@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,12 +8,70 @@
     android:backgroundTint="#7ED957"
     tools:context=".SplashScreenActivity">
 
-
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/nudgeView"
+        android:layout_width="239dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="285dp"
+        android:adjustViewBounds="true"
+        android:background="#00BD8282"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_artboard_1_copynudge"
-
+        app:layout_editor_absoluteX="57dp"
+        app:layout_editor_absoluteY="260dp"
         />
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/nuHalf"
+        android:layout_width="239dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginBottom="112dp"
+        android:accessibilityLiveRegion="polite"
+        android:fitsSystemWindows="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/helveticaneue_bold"
+        android:foregroundGravity="fill"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:text="nu"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="#1CFFFFFF"
+        android:textSize="200dp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toTopOf="@+id/nudgeView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/dgeHalf"
+        android:layout_width="305dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="111dp"
+        android:bufferType="spannable"
+        android:fontFamily="@font/helveticaneue_bold"
+        android:foregroundGravity="top"
+        android:gravity="top"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:text="dge"
+        android:textColor="#1CFFFFFF"
+        android:textSize="159dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nudgeView"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>
