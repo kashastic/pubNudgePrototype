@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,41 +9,113 @@
     android:background="#7ED957"
     android:id="@+id/loginForm">
 
+
+    <TextView
+        android:id="@+id/nuHalf"
+        android:layout_width="239dp"
+        android:layout_height="214dp"
+        android:layout_marginStart="158dp"
+        android:layout_marginBottom="117dp"
+        android:accessibilityLiveRegion="polite"
+        android:fitsSystemWindows="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/helveticaneue_bold"
+        android:foregroundGravity="fill"
+        android:gravity="start"
+        android:includeFontPadding="false"
+        android:text="nu"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="#1CFFFFFF"
+        android:textSize="200dp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toTopOf="@+id/intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/intro"
         android:layout_width="230dp"
         android:layout_height="29dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Enter your licence code"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="200dp"
-        android:layout_centerHorizontal="true"
         android:textAlignment="gravity"
+        android:textColor="#FFFFFF"
         android:textSize="22dp"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/licenceCode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.81"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003" />
+
     <EditText
         android:id="@+id/licenceCode"
         android:layout_width="260dp"
         android:layout_height="46dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:background="@drawable/edit_round"
         android:layout_below="@+id/intro"
         android:layout_centerInParent="true"
-        />
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="303dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edit_round"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.224" />
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
-        android:layout_height="46dp"
+        android:layout_height="35dp"
         android:layout_below="@+id/licenceCode"
         android:layout_centerInParent="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="254dp"
         android:fontFamily="@font/roboto_medium"
         android:text="Click here to get licence"
         android:textColor="#FFFF"
-        android:textSize="14dp" />
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/licenceCode"
+        app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/dgeHalf"
+        android:layout_width="305dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="80dp"
+        android:bufferType="spannable"
+        android:fontFamily="@font/helveticaneue_bold"
+        android:foregroundGravity="top"
+        android:gravity="top"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:text="dge"
+        android:textColor="#1CFFFFFF"
+        android:textSize="159dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="1.0" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
