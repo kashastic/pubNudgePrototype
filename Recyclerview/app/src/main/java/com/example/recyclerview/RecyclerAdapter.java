@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -64,9 +65,10 @@ public class RecyclerAdapter extends Adapter <RecyclerAdapter.ImageViewHolder>{
         }
     }
 
-    public void searchFilter(ArrayList<crop> newList)
+    public void update(ArrayList<crop> newList)
     {
         cropList = new ArrayList<>();
+        cropList.addAll(newList);
         notifyDataSetChanged();
     }
 

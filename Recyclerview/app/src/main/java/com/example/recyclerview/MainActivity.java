@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity  implements SearchView.OnQue
                 newList.add(crop);
             }
         }
-        adapter.searchFilter(newList);
+        adapter.update(newList);
         return true;
     }
 
